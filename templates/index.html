@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Bank Churn Prediction</title>
+</head>
+<body>
+    <div class="img"></div>
+<form class="form" method="POST" action="/sub">
+	<h2>CREDIT SCORE</h2>
+    <input class="score"  type="text" id="uiscore"  name="credscore">
+	<h2>GENDER</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-gender-0" name="uigen" value="0" checked/>
+		<label for="radio-gender-0">FEMALE</label>
+		<input type="radio" id="radio-gender-1" name="uigen" value="1"/>
+		<label for="radio-gender-1">MALE</label>
+	</div>
+
+    <h2>AGE</h2>
+    <input class="age"  type="text" id="uiage"  name="age">
+
+    <h2>TENURE(1-10)</h2>
+    <input class="tenure"  type="text" id="uitenure" name="tenure">
+
+    <h2>BALANCE</h2>
+    <input class="balance"  type="text" id="uibalance"  name="bal">
+   
+    <h2>No Of Products</h2>
+    <div class="switch-field">
+        <input type="radio" id="radio-nop-0" name="uinop" value="0"/>
+		<label for="radio-nop-0">0</label>
+		<input type="radio" id="radio-nop-1" name="uinop" value="1"/>
+		<label for="radio-nop-1">1</label>
+		<input type="radio" id="radio-nop-2" name="uinop" value="2" checked />
+		<label for="radio-nop-2">2</label>
+		<input type="radio" id="radio-nop-3" name="uinop" value="3"/>
+		<label for="radio-nop-3">3</label>
+		<input type="radio" id="radio-nop-4" name="uinop" value="4"/>
+		<label for="radio-nop-4">4</label>
+	</div>
+	
+    <h2>Has Credit Card</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-crcard-0" name="uicrcard" value="0"/>
+		<label for="radio-crcard-0">NO</label>
+		<input type="radio" id="radio-crcard-1" name="uicrcard" value="1" checked/>
+		<label for="radio-crcard-1">YES</label>
+	</div>
+
+	<h2>Are you a active member</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-active-0" name="uiactive" value="0"/>
+		<label for="radio-active-0">NO</label>
+		<input type="radio" id="radio-active-1" name="uiactive" value="1" checked/>
+		<label for="radio-active-1">YES</label>
+	</div>
+
+	
+	<div>
+    <h2>Your Estimated Salary</h2>
+    <input class="salary"  type="text" id="uisalary" class="floatLabel" name="salary">
+  
+  
+    <h2>Location</h2>
+    <select class="location" name="loc" id="uiLocations">
+		<option value="" disabled="disabled" selected="selected">Choose a Location</option>
+		<option name="loc" value="france">france</option>
+        <option name="loc" value="germany">germany</option>
+        <option name="loc" value="spain">spain</option>
+  </select>
+  </div>
+	<button class="submit"  type="submit">Predict</button>
+	<div id="uiEstimatedPrice" class="result">	<h3>{{n}}</h3> </div>
+</form> 
+    
+</body>
+</html>
